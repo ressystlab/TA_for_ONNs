@@ -10,7 +10,7 @@ from numba import jit
 from numpy import pi
 import random
 
-from neuroptica.settings import NP_COMPLEX
+from neuroptica_new.settings import NP_COMPLEX
 
 class OpticalComponent:
     '''Base class for an on-chip optical component'''

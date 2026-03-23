@@ -1,7 +1,7 @@
 '''[Incomplete module] The initializers submodule includes methods for initializing parameters (such as phase shifter
 values) throughout a NetworkLayer.'''
 
-from neuroptica import NetworkLayer
+from neuroptica_new import NetworkLayer
 
 
 class Initializer:

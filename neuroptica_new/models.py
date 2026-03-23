@@ -3,7 +3,7 @@ optical neural network. Currently, only sequential models are supported, but mor
 
 from typing import Dict, List
 import numpy as np
-from neuroptica.layers import NetworkLayer, OpticalMeshNetworkLayer
+from neuroptica_new.layers import NetworkLayer, OpticalMeshNetworkLayer
 
 class BaseModel:
     '''Base class for all models'''

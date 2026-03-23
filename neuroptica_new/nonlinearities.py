@@ -4,7 +4,7 @@ into an optical neural network by using the Activation(nonlinearity) NetworkLaye
 
 import numpy as np
 
-from neuroptica.settings import NP_COMPLEX
+from neuroptica_new.settings import NP_COMPLEX
 
 
 class Nonlinearity:

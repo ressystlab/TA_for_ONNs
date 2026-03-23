@@ -9,8 +9,8 @@ from xmlrpc.client import boolean
 import numpy as np
 from numba import jit, prange
 
-from neuroptica.components import MZI, OpticalComponent, PhaseShifter, _get_mzi_partial_transfer_matrices
-from neuroptica.settings import NP_COMPLEX
+from neuroptica_new.components import MZI, OpticalComponent, PhaseShifter, _get_mzi_partial_transfer_matrices
+from neuroptica_new.settings import NP_COMPLEX
 
 def mzi_uncertainties(p_waveguide_indices, p_ref_value_theta, p_ref_value_phi, p_i):
     '''

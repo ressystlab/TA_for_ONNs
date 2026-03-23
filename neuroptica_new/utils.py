@@ -24,6 +24,20 @@ def is_notebook():
 
 pbar = tqdm_notebook if is_notebook() else tqdm
 
+def to_one_hot(labels, num_classes=None):
+    """
+    Convert class labels (integers) to one-hot encoded format.
+    
+    Parameters:
+    - labels: 1D array of integer class labels.
+    - num_classes: Total number of classes. If None, it will be inferred from the data.
+    
+    Returns:
+    - one_hot: 2D array of shape (len(y), num_classes) with one-hot encoding.
+    """
+    if num_classes is None:
+        num_classes = np.max(labels) + 1
+    return np.eye(num_classes)[labels]
 
 def one_hot_to_value(y):
     total = 0
