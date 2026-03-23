@@ -162,6 +162,10 @@ if __name__ == "__main__":
                                                                         X_test_pca_p.copy().T, y_test.T, train_cfg)
         acc_student.append(np.max(val_accuracy_perfect))
 
+        if np.max(val_accuracy_perfect) >= best_acc:
+            best_acc = np.max(val_accuracy_perfect)
+            np.save(f"{save_path}/phases_{onn_settings['topology']}_KD_{N}.npy", best_phases_perfect)
+
         model_student.set_all_phases_uncerts_losses(best_phases_perfect, loss_dB=0, phase_uncert_phi=0, phase_uncert_theta=0)
         phase_levels = get_phase_levels(b = train_cfg.get("bit_length", 8))
         set_phases_quantized(model_student, 
