@@ -27,6 +27,7 @@ import os
 
 from torch.utils.data import DataLoader
 from itertools import product
+from math import floor
 
 def dataset_to_numpy(dataset):
     loader = DataLoader(dataset, batch_size=len(dataset))
